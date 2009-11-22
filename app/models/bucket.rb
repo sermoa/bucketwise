@@ -1,5 +1,5 @@
 class Bucket < ActiveRecord::Base
-  RECENT_WINDOW_SIZE = 10
+  RECENT_WINDOW_SIZE = 15
 
   Temp = Struct.new(:id, :name, :role, :balance)
 
