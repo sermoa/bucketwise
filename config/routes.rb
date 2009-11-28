@@ -8,8 +8,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :tags, :has_many => :events
   map.resources :tagged_items, :statements
 
-  map.with_options :controller => "subscriptions", :action => "index" do |home|
+  map.with_options :controller => "front", :action => "index" do |home|
     home.root
     home.connect ""
   end
+  
+  map.login '/login', :controller => 'sessions', :action => 'new'
 end

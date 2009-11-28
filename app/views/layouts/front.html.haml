@@ -1,0 +1,32 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
+    %title Dalziel Pascoe Associates
+    
+  %body
+    #content
+      #header
+        %span.title Dalziel Pascoe
+        %span.subtitle Associates
+        %span.established Est. 1876
+        %span.tagline Europe's leading financial services agency
+        
+      %ul#main_menu
+        %li HOME
+        %li SERVICES
+        %li CLIENTS
+        %li TEAM
+        %li MARKET
+        %li CONTACT
+        %li= link_to "LOGIN", login_path
+        
+      %ul#breadcrumbs
+        %li Home
+        %li About
+        %li Company
+              
+      = yield
+      
+      #footer
+        &copy; 2009 Dalziel Pascoe Associates; DPA and the DPA logo are copyright Dalziel Pascoe and Schlong Incorporated.  All rights reserved
