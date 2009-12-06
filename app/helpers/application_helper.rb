@@ -26,6 +26,10 @@ module ApplicationHelper
   end
 
   def format_cents(amount, options={})
-    number_to_currency(amount/100.0, options)
+    number_to_currency(amount/100.0, options.merge(:unit => currency_symbol))
+  end
+
+  def currency_symbol
+    '£'
   end
 end

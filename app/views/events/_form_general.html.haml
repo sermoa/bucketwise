@@ -22,7 +22,7 @@
     %span.expense_label <strong>How much</strong> was paid?
     %span.deposit_label <strong>How much</strong> was deposited?
     %span.transfer_label <strong>How much</strong> was transferred?
-    == $#{text_field_tag :amount, event_amount_value, :size => 8, :id => "expense_total", :class => "number", :onchange => "Events.updateUnassigned()"}
+    == #{currency_symbol}#{text_field_tag :amount, event_amount_value, :size => 8, :id => "expense_total", :class => "number", :onchange => "Events.updateUnassigned()"}
 
   %p#memo_link{:style => visible?(!event_wants_memo?)}
     <strong>Got more to say?</strong>
