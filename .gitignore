@@ -4,3 +4,4 @@ db/*.sqlite3
 db/backup
 *.swp
 vendor/rails
+public/stylesheets/*.css
