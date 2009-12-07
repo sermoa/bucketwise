@@ -14,7 +14,10 @@
     #header
       %h1
         %span.actions
-          = link_to "log out", session_path, :method => :delete
+          -if logged_in?
+            = link_to "log out", session_path, :method => :delete
+          -else
+            = link_to('log in', login_path)
         %span.title
           = link_to "BucketWise", root_path
 

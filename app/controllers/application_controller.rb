@@ -17,7 +17,11 @@ class ApplicationController < ActionController::Base
   protected
 
     attr_reader :subscription, :user
-    helper_method :subscription, :user
+    helper_method :subscription, :user, :logged_in?
+
+    def logged_in?
+      !session[:user_id].nil?
+    end
 
     def find_subscription
       @subscription = user.subscriptions.find(params[:subscription_id] || params[:id])
