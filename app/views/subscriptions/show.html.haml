@@ -24,4 +24,4 @@
     = render :partial => "tags/cloud"
 
   %h2 Recent transactions
-  %table#recent_entries.entries= render(subscription.events.recent(10).last) 
+  %table#recent_entries.entries= render(subscription.events.recent.last) 
